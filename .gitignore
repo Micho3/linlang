@@ -1,2 +1,2 @@
-Application/Runtime/*
-node_modules/*
+/Application/Runtime/*
+/node_modules/*
