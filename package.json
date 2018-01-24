@@ -1,0 +1,26 @@
+{
+  "name": "linlang",
+  "version": "1.0.0",
+  "description": "linlang project include ll_resume ll_practice ll_mobile",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \\\"Error: no test specified\\\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Micho3/resume.git"
+  },
+  "keywords": [
+    "resume"
+  ],
+  "author": "Micho",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Micho3/resume/issues"
+  },
+  "homepage": "https://github.com/Micho3/resume#readme",
+  "devDependencies": {
+    "plugins": "^0.4.2",
+    "webpack": "^3.10.0"
+  }
+}

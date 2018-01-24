@@ -1,0 +1,76 @@
+@keyframes showLeaf {
+  0% {
+    height: 0; }
+  100% {
+    height: 12em; } }
+@keyframes hideTree {
+  0% {
+    align-self: center; }
+  100% {
+    align-self: center;
+    margin-left: -200%; } }
+.ll_tree {
+  padding: 5px 0px;
+  background: white;
+  border: solid silver 2px;
+  border-radius: 5px;
+  -ms-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  display: inline-flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  align-self: flex-start;
+  width: 80%;
+  height: auto; }
+  .ll_tree .ll_trunk_bark {
+    /*border: solid red 1px;*/
+    border-radius: 5px;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center; }
+    .ll_tree .ll_trunk_bark .ll_trunk {
+      border: solid silver 1px;
+      border-radius: 5px;
+      background: #40b462;
+      display: inline-flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      min-height: 2em;
+      margin: 1px;
+      width: 100%; }
+      .ll_tree .ll_trunk_bark .ll_trunk:hover {
+        background: rgba(64, 180, 98, 0.8); }
+    .ll_tree .ll_trunk_bark .ll_leaf {
+      width: 100%;
+      background: silver;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      animation: showLeaf 1s 1;
+      overflow: hidden;
+      -moz-animation: showLeaf 1s;
+      -webkit-animation: showLeaf 1s;
+      -ms-animation: showLeaf 1s;
+      -o-animation: showLeaf 1s;
+      justify-content: center; }
+      .ll_tree .ll_trunk_bark .ll_leaf li {
+        width: 100%;
+        text-align: center;
+        background: #7DB5FB;
+        border: solid #D7EE40 2px;
+        border-radius: 5px;
+        margin-top: 3px;
+        min-height: 1.5em; }
+        .ll_tree .ll_trunk_bark .ll_leaf li:hover {
+          background-color: rgba(125, 181, 251, 0.8); }
+
+/*# sourceMappingURL=index.css.map */
