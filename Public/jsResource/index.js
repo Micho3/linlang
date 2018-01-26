@@ -7,7 +7,7 @@ var common = require("./functions");
             common.loading();
         }
     });
-    ajax.get('Practice/Index/trunk', function(data){
+    ajax.get('/Practice/Index/trunk', function(data){
         let tree = document.getElementById('ll_tree');
         data.forEach(function(val){
             let treeDiv = document.createElement('div');
@@ -24,7 +24,11 @@ var common = require("./functions");
                     let leaf = document.createElement('li');
                     leaf.innerHTML = v.content;
                     leaf.setAttribute("class","ll_leaf_leafage");
-                    leaf.setAttribute("data-title",v.title);
+                    leaf.setAttribute("data-title",v.name);
+                    leaf.on("click",function () {
+                        let page = this.getAttribute("data-title");
+                        window.location.href = "/Practice/Index/getPractice?page=" + page;
+                    });
                     treeUl.appendChild(leaf);
                 });
             }

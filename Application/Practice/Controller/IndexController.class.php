@@ -2,6 +2,7 @@
 namespace Practice\Controller;
 use Think\Controller;
 class IndexController extends Controller {
+    private $viewPath = "Application/Practice/View";
     public function index(){
         $this->display();
     }
@@ -22,6 +23,16 @@ class IndexController extends Controller {
             }
         }
         $this->ajaxReturn($result);
+    }
+
+    public function getPractice(){
+        $page = isset($_GET['page'])?$_GET['page']:null;
+        if($page != null && is_file($this->viewPath."/Index/{$page}.html")){
+            $this->display("{$page}");
+        }
+        else{
+            $this->display("404");
+        }
     }
 }
 

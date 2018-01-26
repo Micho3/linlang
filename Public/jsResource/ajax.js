@@ -58,7 +58,7 @@ Ajax.prototype.dealData = function(data){
     let result = [];    
     try{
         for(let i in data){
-            if(data.hasOwnProperty(i) && isArray(data[i])){
+            if(data.hasOwnProperty(i) && this.isArray(data[i])){
                 data[i].forEach(function(val){
                     result.push(i + "[]=" + val);
                 });
@@ -72,7 +72,7 @@ Ajax.prototype.dealData = function(data){
                 result.push(i+'='+data[i]);
             }
         }
-        result = result.join("&");
+        return result.join("&");
     }catch(e){
         throw new Error(e);
     }
