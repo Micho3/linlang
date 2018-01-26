@@ -1,10 +1,10 @@
 $line-height: 1.5em;
 @keyframes showLeaf{
     0%{
-        height: 0;
+        max-height: 0;
     }
     100%{
-        height: $line-height * 8;
+        max-height: $line-height * 8;
     }
 }
 @keyframes hideTree{
@@ -33,7 +33,6 @@ $line-height: 1.5em;
     width: 80%;
     height: auto;
     .ll_trunk_bark{
-        /*border: solid red 1px;*/
         border-radius: 5px;
         display:inline-flex;
         flex-direction: row;
@@ -61,7 +60,6 @@ $line-height: 1.5em;
         .ll_leaf{
             width: 100%;
             background: silver;
-            /*display: flex;*/
             display: none;
             flex-direction: row;
             flex-wrap: wrap;
@@ -75,7 +73,8 @@ $line-height: 1.5em;
             li{
                 width: 100%;
                 text-align: center;
-                background: #7DB5FB;
+                //background: #7DB5FB;
+                background: #1D8AD8;
                 border: solid #D7EE40 2px;
                 border-radius: 5px;
                 margin-top: 3px;

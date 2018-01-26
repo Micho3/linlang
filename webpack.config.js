@@ -1,8 +1,9 @@
 const path = require("path");
 
- let config = {
+let config = {
     entry: {
         practice: __dirname + "/Public/jsResource/index.js",
+        easyTabs: __dirname + "/Public/jsResource/easyTabs.js",
         resume: __dirname + "/Public/jsResource/resume.js"
     },
     output: {
