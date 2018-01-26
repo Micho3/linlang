@@ -1,0 +1,89 @@
+$line-height: 1.5em;
+@keyframes showLeaf{
+    0%{
+        height: 0;
+    }
+    100%{
+        height: $line-height * 8;
+    }
+}
+@keyframes hideTree{
+    0%{
+        align-self: center;
+    }
+    100%{
+        align-self: center;
+        margin-left: -200%;
+    }
+}
+.ll_tree{
+    padding: 5px 0px;
+    background: rgb(255,255,255);
+    border: solid silver 2px;
+    border-radius: 5px;
+    -ms-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    display:inline-flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-self: flex-start;
+    width: 80%;
+    height: auto;
+    .ll_trunk_bark{
+        /*border: solid red 1px;*/
+        border-radius: 5px;
+        display:inline-flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        align-content: center;
+        .ll_trunk{
+            border: solid silver 1px;
+            border-radius: 5px;
+            background: rgb(64, 180, 98);
+            display:inline-flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            min-height: 2em;
+            margin: 1px;
+            width: 100%;
+            &:hover{
+                background: rgba(64, 180, 98, 0.8);
+            }
+        }
+        .ll_leaf{
+            width: 100%;
+            background: silver;
+            /*display: flex;*/
+            display: none;
+            flex-direction: row;
+            flex-wrap: wrap;
+            animation: showLeaf 1s 1;
+            overflow: hidden;
+            -moz-animation: showLeaf 1s;
+            -webkit-animation: showLeaf 1s;
+            -ms-animation: showLeaf 1s;
+            -o-animation: showLeaf 1s;
+            justify-content: center;
+            li{
+                width: 100%;
+                text-align: center;
+                background: #7DB5FB;
+                border: solid #D7EE40 2px;
+                border-radius: 5px;
+                margin-top: 3px;
+                min-height: 1.5em;
+                &:hover{
+                    background-color: rgba(125, 181, 251, 0.8);
+                }
+            }
+        }
+    }
+}

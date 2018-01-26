@@ -1,2 +1,5 @@
 /Application/Runtime/*
 /node_modules/*
+/.idea/*
+*/.sass-cache/
+*.css

@@ -11,7 +11,7 @@ class IndexController extends Controller {
         $data = $model->where("type='trunk'")->select();
         $result = array();
         foreach($data as $key => $value){
-            if($value.level == 0){
+            if($value['level'] == 0){
                 $value['child']= array();
                 foreach($data as $k => $v){
                     if($v['pid'] == $value['id']){
