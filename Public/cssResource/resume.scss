@@ -1,0 +1,19 @@
+.scoll{
+    position: fixed;
+    width: 5%;
+    height: 60%;
+    right: 0;
+    top: 20%;
+    border: solid white 1px;
+    text-align: center;
+
+    hr{
+        width: 5%;
+        height: 80%;
+        background: white;
+        color: white;
+        position: absolute;
+        top: 10%;
+        left: 50%;
+    }
+}
