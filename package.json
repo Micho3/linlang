@@ -4,7 +4,8 @@
   "description": "linlang project include ll_resume ll_practice ll_mobile",
   "main": "index.js",
   "scripts": {
-    "test": "echo \\\"Error: no test specified\\\" && exit 1"
+    "test": "echo \\\"Error: no test specified\\\" && exit 1",
+    "start": "webpack"
   },
   "repository": {
     "type": "git",
