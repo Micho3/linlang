@@ -31,7 +31,7 @@ class IndexController extends Controller {
             $this->display("{$page}");
         }
         else{
-            $this->display("404");
+            throw new Exception("Page Not Found!");
         }
     }
 }
