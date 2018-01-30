@@ -4,16 +4,43 @@
     height: 60%;
     right: 0;
     top: 20%;
-    border: solid white 1px;
     text-align: center;
-
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-around;
     hr{
-        width: 5%;
-        height: 80%;
+        width: 3%;
+        height: 100%;
         background: white;
         color: white;
         position: absolute;
-        top: 10%;
-        left: 50%;
+        border: none;
+        left: 48.5%;
+    }
+    .point{
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        span{
+            display: block;
+            border-radius: 50%;
+            background: white;
+            width: 20px;
+            height: 20px;
+            transition: 0.5s;
+            cursor: pointer;
+        }
+        &:hover{
+            span{
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+    .spanActive{
+        width: 30px;
+        height: 30px;
     }
 }
