@@ -63,13 +63,70 @@
 /******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
-/******/ ({
+/******/ ([
+/* 0 */,
+/* 1 */,
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
 
-/***/ 4:
-/***/ (function(module, exports) {
+"use strict";
 
+let loading = function(){
+    let elem = document.getElementsByClassName("loading")[0];
+    elem.style.visibility = 'visible';
+};
 
+let loaded = function(){
+    let elem = document.getElementsByClassName("loading")[0];
+    elem.style.visibility = 'hidden';
+};
+
+window.HTMLElement.prototype.on = function(type, fn, capture){
+    let el = this;
+    if(window.addEventListener){
+        el.addEventListener(type, function(e) {
+            fn.call(el, e);
+        }, capture);
+    }
+    else{
+        el.attachEvent("on" + type, function(e) {
+            fn.call(el, e);
+        });
+    }
+};
+ module.exports = {
+     loading: loading,
+     loaded: loaded
+ };
+
+/***/ }),
+/* 3 */,
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+const anchor = ['brief','exp','skill','prod','motto'];
+let currentIndex = 0;
+var common = __webpack_require__(2);
+
+(function (){
+    let scorll = document.getElementsByClassName("point");
+    Array.prototype.forEach.call(scorll, function (val, key) {
+        val.on("click",function () {
+            let points = document.getElementsByClassName("point");
+            Array.prototype.forEach.call(points,function(v){
+                v.classList.remove("pointActive");
+            });
+            this.classList.add("pointActive");
+            let index = parseInt(this.getAttribute('data-index'));
+            currentIndex = index;
+            let targetHeight = document.getElementById(anchor[index]).offsetTop;
+            let currentHeight = document.documentElement.scrollTop;
+            // console.log(document.documentElement);
+            window.scrollTo(0, targetHeight);
+            // location.href = "#" + anchor[index];
+        });
+    });
+})();
 
 /***/ })
-
-/******/ });
+/******/ ]);

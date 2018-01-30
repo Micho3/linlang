@@ -78,6 +78,7 @@ var common = __webpack_require__(2);
     });
     ajax.get('/Practice/Index/trunk', function(data){
         let tree = document.getElementById('ll_tree');
+        // 绘制树干部分 -- trunk
         data.forEach(function(val){
             let treeDiv = document.createElement('div');
             treeDiv.setAttribute('class','ll_trunk_bark');
@@ -112,7 +113,6 @@ var common = __webpack_require__(2);
                 Array.prototype.forEach.call(leaves, function(item){
                     item.style.display = 'none';
                 });
-                console.log(siblingUl);
                 if(flag){
                     siblingUl.style.display = 'none';
                 }
