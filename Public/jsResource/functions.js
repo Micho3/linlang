@@ -22,7 +22,8 @@ window.HTMLElement.prototype.on = function(type, fn, capture){
         });
     }
 };
- module.exports = {
-     loading: loading,
-     loaded: loaded
- };
+
+module.exports = {
+    loading: loading,
+    loaded: loaded
+};

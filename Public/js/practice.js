@@ -60,15 +60,50 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Ajax = __webpack_require__(1);
-var common = __webpack_require__(2);
+"use strict";
+
+let loading = function(){
+    let elem = document.getElementsByClassName("loading")[0];
+    elem.style.visibility = 'visible';
+};
+
+let loaded = function(){
+    let elem = document.getElementsByClassName("loading")[0];
+    elem.style.visibility = 'hidden';
+};
+
+window.HTMLElement.prototype.on = function(type, fn, capture){
+    let el = this;
+    if(window.addEventListener){
+        el.addEventListener(type, function(e) {
+            fn.call(el, e);
+        }, capture);
+    }
+    else{
+        el.attachEvent("on" + type, function(e) {
+            fn.call(el, e);
+        });
+    }
+};
+
+module.exports = {
+    loading: loading,
+    loaded: loaded
+};
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var Ajax = __webpack_require__(2);
+var common = __webpack_require__(0);
 
 (function(){
     let ajax = new Ajax({
@@ -136,7 +171,7 @@ var hideTree = function(){
 };
 
 /***/ }),
-/* 1 */
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -302,40 +337,6 @@ Ajax.prototype.post = function(url, data, s, f){
 
 module.exports = Ajax;
 
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-let loading = function(){
-    let elem = document.getElementsByClassName("loading")[0];
-    elem.style.visibility = 'visible';
-};
-
-let loaded = function(){
-    let elem = document.getElementsByClassName("loading")[0];
-    elem.style.visibility = 'hidden';
-};
-
-window.HTMLElement.prototype.on = function(type, fn, capture){
-    let el = this;
-    if(window.addEventListener){
-        el.addEventListener(type, function(e) {
-            fn.call(el, e);
-        }, capture);
-    }
-    else{
-        el.attachEvent("on" + type, function(e) {
-            fn.call(el, e);
-        });
-    }
-};
- module.exports = {
-     loading: loading,
-     loaded: loaded
- };
 
 /***/ })
 /******/ ]);
