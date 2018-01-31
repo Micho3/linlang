@@ -113,6 +113,7 @@ var common = __webpack_require__(0);
 
 (function (){
     let scorll = document.getElementsByClassName("point");
+    document.getElementsByClassName("point")[0].classList.add("pointActive");
     Array.prototype.forEach.call(scorll, function (val, key) {
         val.on("click",function () {
             let index = parseInt(this.getAttribute('data-index'));
@@ -127,6 +128,20 @@ var common = __webpack_require__(0);
         e = e || window.event;
         setDirection(e.wheelDelta < 0);
     }, {passive: true});
+    window.onscroll = function () {
+        let current = document.documentElement.scrollTop;
+        let screenHeight = window.screen.height;
+        let points = document.getElementsByClassName("point");
+        Array.prototype.forEach.call(points,function(v){
+            let pageHeight = document.getElementById(anchor[v.getAttribute("data-index")]).offsetTop;
+            if(pageHeight < (current + screenHeight * 0.5) && pageHeight >= current){
+                v.classList.add("pointActive");
+            }
+            else{
+                v.classList.remove("pointActive");
+            }
+        });
+    }
 })();
 
 var setDirection = function (flag) {
@@ -138,7 +153,6 @@ var setDirection = function (flag) {
             else {
                 switchPage(anchor.length - 1);
             }
-
         }
         else {
             if (currentIndex > 0) {
@@ -153,10 +167,10 @@ var setDirection = function (flag) {
 
 var switchPage = function (index) {
     let points = document.getElementsByClassName("point");
-    Array.prototype.forEach.call(points,function(v){
-        v.classList.remove("pointActive");
-    });
-    points[index].classList.add("pointActive");
+    // Array.prototype.forEach.call(points,function(v){
+    //     v.classList.remove("pointActive");
+    // });
+    // points[index].classList.add("pointActive");
     currentIndex = index;
     let targetHeight = document.getElementById(anchor[index]).offsetTop;
     setAniAct(targetHeight);
