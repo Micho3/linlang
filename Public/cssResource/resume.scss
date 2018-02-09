@@ -1,3 +1,12 @@
+.body{
+    background-color: rgba(100,53,146,1);
+    background-attachment:fixed;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
 .scoll{
     position: fixed;
     width: 5%;

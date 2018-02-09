@@ -21,7 +21,9 @@
   },
   "homepage": "https://github.com/Micho3/resume#readme",
   "devDependencies": {
+    "extract-text-webpack-plugin": "^3.0.2",
     "plugins": "^0.4.2",
+    "uglifyjs-webpack-plugin": "^1.1.8",
     "webpack": "^3.10.0"
   }
 }

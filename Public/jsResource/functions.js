@@ -1,12 +1,12 @@
 "use strict";
 let loading = function(){
     let elem = document.getElementsByClassName("loading")[0];
-    elem.style.visibility = 'visible';
+    elem.style.display = 'flex';
 };
 
 let loaded = function(){
     let elem = document.getElementsByClassName("loading")[0];
-    elem.style.visibility = 'hidden';
+    elem.style.display = 'none';
 };
 
 window.HTMLElement.prototype.on = function(type, fn, capture){
