@@ -1,8 +1,8 @@
 const anchor = ['brief','exp','skill','prod','motto'];
 let currentIndex = 0;
-var aniAct = null; //移动滚动条的事件
-var scrollAct = true;
-var common = require('./functions.js');
+let aniAct = null; //移动滚动条的事件
+let scrollAct = true;
+let common = require('../common/functions.js');
 
 (function (){
     let scorll = document.getElementsByClassName("point");

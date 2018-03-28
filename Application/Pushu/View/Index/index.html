@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>噗咻</title>
+    <link rel="stylesheet" href="__PUBLIC__/css/common.css" type="text/css">
+    <link rel="stylesheet" href="__PUBLIC__/css/pushu.css" type="text/css">
+</head>
+<body>
+    <div class="body" id="pushu" v-on:click="hideDropdown">
+        <!-- 头部导航   -->
+        <div class="pushu_head">
+            <img class="pushu_logo" v-bind:src="'__PUBLIC__/img/'+ logo +'.jpg'" v-on:click="showSetting">
+            <div class="greeting">
+                <div class="skin" v-on:click="showDropDown">
+                    <span>skin</span>
+                    <ul class="list">
+                        <li v-for="skin in skins" v-bind:data-skin="skin" v-on:click="changeSkin">
+                            <img v-bind:src="'__PUBLIC__/img/'+ skin + '.jpg'">
+                        </li>
+                    </ul>
+                </div>
+                <a href="#">注册</a>
+                ·
+                <a href="#">登录</a>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="搜索音乐，按下Enter开始吧!!" v-on:keydown="searchMusic" v-on:focus="showHistory" v-on:click="preventClickBubble" v-model="searchKeyword">
+                <ul class="dropDown historySearch">
+                    <li v-if="searchHistory == null || searchHistory.length === 0">未找到搜索记录</li>
+                    <li v-if="searchHistory.length > 0" v-for="item in searchHistory" v-on:click="searchMusic">{{item}}</li>
+                </ul>
+            </div>
+        </div>
+        <!-- 侧边导航   -->
+        <!--<ul class="pushu_nav">-->
+            <!--<li v-for="item in menu">{{item}}</li>-->
+        <!--</ul>-->
+        <pushu-nav></pushu-nav>
+        <!-- 底部操作台 -->
+        <div class="pushu_console">
+            <audio id="player"></audio>
+            <div class="operation">
+                <a href="#" class="prev"></a>
+                <a href="#" class="play" v-on:click="play"></a>
+                <a href="#" class="next"></a>
+            </div>
+            <div class="progress">
+                <div class="album_logo">
+                    <img id="album" v-bind:src="'__PUBLIC__/img/'+ logo + '.jpg'">
+                </div>
+                <div class="progress_bar">
+                    <div class="music_bar">
+                        <span class="music_point"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- loading遮罩 -->
+    <div class="loading">
+        <img src="__PUBLIC__/img/loading.jpg">
+    </div>
+</body>
+<script type="text/javascript" src="__PUBLIC__/js/pushu.js"></script>
+</html>

@@ -1,8 +1,10 @@
 <?php
-namespace Practice\Controller;
+namespace Pushu\Controller;
 use Think\Controller;
+
 class IndexController extends Controller {
     private $viewPath = "Application/Practice/View";
+
     public function index(){
         $this->display();
     }
@@ -34,5 +36,13 @@ class IndexController extends Controller {
             throw new \Exception("Page Not Found!");
         }
     }
+
+//    private $mongo = null;
+//    public function getMongo(){
+//        if($this->mongo === null){
+//            $this->mongo = new MonModel();
+//        }
+//        return $this->mongo;
+//    }
 }
 

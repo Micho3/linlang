@@ -1,0 +1,273 @@
+.nozomi{
+    background-color: #643592 !important;
+    .pushu_head{
+        background-color: rgb(64, 180, 98) !important;
+    }
+    .pushu_nav{
+        li{
+            &:hover{
+                color: rgb(64, 180, 98) !important;
+            }
+        }
+    }
+    .pushu_console{
+        border-color: rgb(64, 180, 98) !important;
+        .progress{
+            border-color: rgb(64, 180, 98) !important;
+            .progress_bar{
+                .music_bar{
+                    border: thin solid #643592 !important;
+                    background: rgb(64, 180, 98) !important;
+                }
+                .music_point{
+                    background-color: #643592 !important;
+                    border: medium solid rgb(64, 180, 98) !important;
+                }
+            }
+        }
+    }
+}
+
+.eli{
+    background-color: yellow !important;
+    .pushu_head{
+        background-color: #5A8BF0 !important;
+    }
+    .pushu_nav{
+        li{
+            &:hover{
+                color: #5A8BF0 !important;
+            }
+        }
+    }
+    .pushu_console{
+        border-color: #5A8BF0 !important;
+        .progress{
+            border-color: #5A8BF0 !important;
+            .progress_bar{
+                .music_bar{
+                    border: thin solid yellow !important;
+                    background: #5A8BF0 !important;
+                }
+                .music_point{
+                    background-color: yellow !important;
+                    border: medium solid #5A8BF0 !important;
+                }
+            }
+        }
+    }
+}
+
+.niko{
+    background-color: #464040 !important;
+    .pushu_head{
+        background-color: #E85555 !important;
+    }
+    .pushu_nav{
+        li{
+            &:hover{
+                color: #E85555 !important;
+            }
+        }
+    }
+    .pushu_console{
+        border-color: #E85555 !important;
+        .progress{
+            border-color: #E85555 !important;
+            .progress_bar{
+                .music_bar{
+                    border: thin solid #464040 !important;
+                    background: #E85555 !important;
+                }
+                .music_point{
+                    background-color: #464040 !important;
+                    border: medium solid #E85555 !important;
+                }
+            }
+        }
+    }
+}
+
+.maki{
+    background-color: #E54B4B !important;
+    .pushu_head{
+        background-color: #AA2EE8 !important;
+    }
+    .pushu_nav{
+        li{
+            &:hover{
+                color: #AA2EE8 !important;
+            }
+        }
+    }
+    .pushu_console{
+        border-color: #AA2EE8 !important;
+        .progress{
+            border-color: #E54B4B !important;
+            .progress_bar{
+                .music_bar{
+                    border: thin solid #E54B4B !important;
+                    background: #AA2EE8 !important;
+                }
+                .music_point{
+                    background-color: #E54B4B !important;
+                    border: medium solid #AA2EE8 !important;
+                }
+            }
+        }
+    }
+}
+
+.rin{
+    background-color: gold !important;
+    .pushu_head{
+        color: rgba(0,0,0,0.8) !important;
+        background-color: yellow !important;
+        a{
+            color: rgba(0,0,0,0.8) !important;
+        }
+    }
+    .pushu_nav{
+        li{
+            &:hover{
+                color: yellow !important;
+            }
+        }
+    }
+    .pushu_console{
+        border-color: yellow !important;
+        .progress{
+            border-color: yellow !important;
+            .progress_bar{
+                .music_bar{
+                    border: thin solid gold !important;
+                    background: yellow !important;
+                }
+                .music_point{
+                    background-color: gold !important;
+                    border: medium solid yellow !important;
+                }
+            }
+        }
+    }
+}
+
+.hanayo{
+    background-color: #899871 !important;
+    .pushu_head{
+        background-color: #9052B9 !important;
+    }
+    .pushu_nav{
+        li{
+            &:hover{
+                color: #9052B9 !important;
+            }
+        }
+    }
+    .pushu_console{
+        border-color: #9052B9 !important;
+        .progress{
+            border-color: #9052B9 !important;
+            .progress_bar{
+                .music_bar{
+                    border: thin solid #899871 !important;
+                    background: #9052B9 !important;
+                }
+                .music_point{
+                    background-color: #899871 !important;
+                    border: medium solid #9052B9 !important;
+                }
+            }
+        }
+    }
+}
+
+.umi{
+    background-color: #1552D8 !important;
+    .pushu_head{
+        background-color: gold !important;
+    }
+    .pushu_nav{
+        li{
+            &:hover{
+                color: gold !important;
+            }
+        }
+    }
+    .pushu_console{
+        border-color: gold !important;
+        .progress{
+            border-color: gold !important;
+            .progress_bar{
+                .music_bar{
+                    border: thin solid #1552D8 !important;
+                    background: gold !important;
+                }
+                .music_point{
+                    background-color: #1552D8 !important;
+                    border: medium solid gold !important;
+                }
+            }
+        }
+    }
+}
+
+.kotori{
+    background-color: #939886 !important;
+    .pushu_head{
+        background-color: #C4D695 !important;
+    }
+    .pushu_nav{
+        li{
+            &:hover{
+                color: #C4D695 !important;
+            }
+        }
+    }
+    .pushu_console{
+        border-color: #C4D695 !important;
+        .progress{
+            border-color: #C4D695 !important;
+            .progress_bar{
+                .music_bar{
+                    border: thin solid #939886 !important;
+                    background: #C4D695 !important;
+                }
+                .music_point{
+                    background-color: #939886 !important;
+                    border: medium solid #C4D695 !important;
+                }
+            }
+        }
+    }
+}
+
+.honoka{
+    background-color: orange !important;
+    .pushu_head{
+        background-color: #5A8BF0 !important;
+    }
+    .pushu_nav{
+        li{
+            &:hover{
+                color: #5A8BF0 !important;
+            }
+        }
+    }
+    .pushu_console{
+        border-color: #5A8BF0 !important;
+        .progress{
+            border-color: #5A8BF0 !important;
+            .progress_bar{
+                .music_bar{
+                    border: thin solid orange !important;
+                    background: #5A8BF0 !important;
+                }
+                .music_point{
+                    background-color: orange !important;
+                    border: medium solid #5A8BF0 !important;
+                }
+            }
+        }
+    }
+}

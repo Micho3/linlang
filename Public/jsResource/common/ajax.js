@@ -28,8 +28,10 @@ Ajax.prototype.baseAjax = (function(){
     }
     if(AjaxObj === null){
         try{
-            var except = Ajax.prototype.AjaxException("Can't find avaliable Ajax Object", 1);
-            throw except;
+            throw Ajax.prototype.AjaxException("Can't find avaliable Ajax Object", 1);
+            // throw except;
+            // var except = Ajax.prototype.AjaxException("Can't find avaliable Ajax Object", 1);
+            // throw except;
         }catch(e){
             throw new Error(e.message)
         }
@@ -118,7 +120,7 @@ Ajax.prototype.get = function(url, data, s, f){
     this.baseAjax.send();
 };
 
-//模拟ajax的post方法
+// post方法实现
 Ajax.prototype.post = function(url, data, s, f){
     if(typeof data === 'function'){
         if(typeof s !== 'undefined'){
@@ -156,6 +158,38 @@ Ajax.prototype.post = function(url, data, s, f){
     this.baseAjax.open("POST", url, this.async);
     this.baseAjax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"); 
     this.baseAjax.send(data);
+};
+
+// jsonp 方法实现
+Ajax.prototype.jsonp = function (url, data, success) {
+    let stamp = new Date().getTime();
+    let callback = 'callback' + stamp;
+    let callbackStr = '';
+    if(url.indexOf("?") > 0){
+        callbackStr = '&'+ callback +'=?';
+    }
+    else{
+        callbackStr = '?'+ callback +'=?';
+    }
+    if(!(data == null)){
+        let dataStr = this.dealData(data);
+        callbackStr = dataStr + callbackStr;
+    }
+    if(!(url == null) && url.length > 0){
+        url += callbackStr;
+    }
+    else{
+        return null;
+    }
+    var scriptNode = document.createElement("script");
+    scriptNode.setAttribute('src', url);
+    var head = document.querySelector('head');
+    head.appendChild(scriptNode);
+    window[callback] = function (data) {
+        success(data);
+        head.removeChild(scriptNode);
+        window[callback] = null;
+    };
 };
 
 module.exports = Ajax;
